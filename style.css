@@ -1,0 +1,40 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f6f8;
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 0 10px;
+}
+
+.cards { display: flex;
+   gap: 10px; }
+.card { flex: 1; 
+  background: white;
+   padding: 12px; 
+   border-radius: 6px; }
+.card b { display: block; 
+  font-size: 22px;
+   margin-top: 6px; }
+
+form, .bar { display: flex;
+   gap: 6px;
+    margin: 12px 0;
+     flex-wrap: wrap; }
+input, select, button { padding: 8px; }
+button { background: #2b7a78;
+   color: white;
+    border: none; 
+    cursor: pointer; }
+#clear, td button { background: crimson; }
+
+.warn { color: crimson; 
+  font-weight: bold; }
+
+table { width: 100%;
+   border-collapse: collapse;
+    background: white; }
+th, td { padding: 8px;
+   border-bottom: 1px solid #ddd; 
+   text-align: left; }
+th { background: #14213d;
+   color: white; }

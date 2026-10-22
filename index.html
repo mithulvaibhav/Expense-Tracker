@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SpendSmart</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>SpendSmart - Personal Expense Tracker</h1>
+
+  <div class="cards">
+    <div class="card">Spent this month<b id="spent">₹0</b></div>
+    <div class="card">Expenses this month<b id="count">0</b></div>
+    <div class="card">Remaining budget<b id="remaining">₹0</b></div>
+    <div class="card">Spent in USD (approx)<b id="usd">-</b></div>
+  </div>
+  <p id="warning" class="warn" hidden>Warning: monthly budget exceeded!</p>
+
+  <form id="budgetForm">
+    <input type="number" id="budget" placeholder="Monthly budget (₹)" min="1">
+    <button>Set Budget</button>
+  </form>
+
+  <form id="form">
+    <input id="name" placeholder="Expense name">
+    <input type="number" id="amount" placeholder="Amount (₹)">
+    <select id="category">
+      <option>Food</option><option>Travel</option><option>Shopping</option><option>Other</option>
+    </select>
+    <input type="date" id="date">
+    <button>Add Expense</button>
+  </form>
+  <p id="error" class="warn"></p>
+
+  <div class="bar">
+    <input id="search" placeholder="Search by name">
+    <select id="filter">
+      <option>All</option><option>Food</option><option>Travel</option><option>Shopping</option><option>Other</option>
+    </select>
+    <select id="sort">
+      <option value="new">Date (newest)</option>
+      <option value="old">Date (oldest)</option>
+    </select>
+    <button id="export">Export JSON</button>
+    <button id="import">Import JSON</button>
+    <button id="clear">Clear All</button>
+    <input type="file" id="file" accept=".json" hidden>
+  </div>
+
+  <table>
+    <thead><tr><th>Name</th><th>Amount</th><th>Category</th><th>Date</th><th>Action</th></tr></thead>
+    <tbody id="tbody"></tbody>
+  </table>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
