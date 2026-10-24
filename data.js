@@ -1,4 +1,4 @@
-const CATEGORIES = ["Food", "Travel", "Shopping", "Other"];
+const CATEGORIES = ["Food", "Travel", "Shopping", "Cinema","Entertainment","Petrol"];
 
 export class ExpenseManager {
   constructor() {
@@ -46,7 +46,7 @@ export class ExpenseManager {
 }
 
 export function validate(name, amount, date) {
-  if (!/^[A-Za-z0-9 ]{2,30}$/.test(name)) return "Name must be 2-30 letters or numbers.";
+  if (!/^[A-Za-z]{2,20}$/.test(name)) return "Name must be 2-30 letters or numbers.";
   if (!(amount > 0)) return "Amount must be greater than 0.";
   if (!/^\d{4}-\d{2}-\d{2}$/.test(date)) return "Please select a valid date.";
   return "";
